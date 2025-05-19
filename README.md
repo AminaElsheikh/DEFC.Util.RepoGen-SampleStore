@@ -99,7 +99,7 @@ Please verify and update the following in the file:
 | `Namespace`             | ❌ Pending | Root namespace to be used for generated code                                                  | `SampleStore`            |
 | `FoldersStructureModel` | ✅ Set      | Structure model used for organizing the generated codebase                                   | `MODEL_1`                |
 
-> ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and `MODEL_CUSTOM`.
+> ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
 
 #### 📁 Example `RepoGen.json`
 
@@ -349,7 +349,7 @@ dotnet tool run DEFC.Util.RepoGen crud --tbl ProductCategories --service Product
 > ⚠️ This overwrites existing files. Useful when structure or schema has changed.
 
 ### 🧱 Challenge 4: Change Structure Model
-- Try using `MODEL_2` (Layered), (Hexagonal) `MODEL_3` (Hexagonal) or `MODEL_CUSTOM` and observe code layout changes.
+- Try using `MODEL_2` (Layered), (Hexagonal) `MODEL_3` (Hexagonal) or [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md) and observe code layout changes.
 > ⚠️ This Challenge is the most critical
 1. Manually delete(or keep aside) previously generated folders (to avoid conflicts):
     ```bash
@@ -371,7 +371,7 @@ dotnet tool run DEFC.Util.RepoGen crud --tbl ProductCategories --service Product
     ```
 5. Observe how the folder layout and organization differ from `MODEL_1`.
 
-> 🔁 You can also try `MODEL_3` (Hexagonal) or define your own using `MODEL_CUSTOM`.
+> 🔁 You can also try `MODEL_3` (Hexagonal) or define your own using [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
 
 ---
 ## 🎯 Learning Objectives
