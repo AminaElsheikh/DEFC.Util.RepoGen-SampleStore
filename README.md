@@ -254,17 +254,17 @@ Look inside the following folders:
 - Find the auto-generated ProductsRepository, UnitOfWork, etc.
 
 
+
 | MODEL_1                 | MODEL_2            |
 |-------------------------|--------------------|
-|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)
-|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|
+|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|
 
 
 
 | MODEL_3            | MODEL_CUSTOM       |
 |--------------------|--------------------|
-|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)
-|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|
+|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|
+
 
 ##  ✅ Step 10: Configure your application
 This based on your application requirements.
