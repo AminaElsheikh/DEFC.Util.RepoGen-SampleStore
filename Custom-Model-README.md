@@ -101,23 +101,26 @@ Please verify and update the following in the file:
 
 - Set your required folder structure as you want in `custom_model.json` file in path `SampleStore/RepoGenTool/Structure`
 ```json
+{
+  //"This file defines the standard project folder structure and required mappings for validation.
+  //"You may add extra folders, but required folders must exist in the hierarchy.
 
-[
-  {
-    "Name": "Core",
-    "Children": [
-      { "Name": "Entities" }, // For Models
-      { "Name": "Interfaces" }, // For IRepositories
-    ]
-  },
-  {
-    "Name": "Infrastructure",
-    "Children": [
-      { "Name": "Persistence" }, // For DBContext
-      { "Name": "Repositories" } // For Repositories
-      { "Name": "UnitOfWork" } // For UnitOfWork
-    ]
-  },
+  "Structure": [
+    {
+      "Name": "Core",
+      "Children": [
+        { "Name": "Entities" }, // For Models
+        { "Name": "Interfaces" } // For IRepositories
+      ]
+    },
+    {
+      "Name": "Infrastructure",
+      "Children": [
+        { "Name": "Persistence" }, // For DBContext
+        { "Name": "Repositories" }, // For Repositories
+        { "Name": "UnitOfWork" } // For UnitOfWork
+      ]
+    },
     {
       "Name": "Application",
       "Children": [
@@ -125,7 +128,8 @@ Please verify and update the following in the file:
         { "Name": "DTOs" } // For DTOs
       ]
     }
-]
+  ]
+}
 
 ```
 - Map the tool basic file in `structure_mapper.json` file in path `SampleStore/RepoGenTool/Structure`
