@@ -1,9 +1,9 @@
-# 🏁 Training Task Scenario – SampleStore API
+# 🏁 Training Task Scenario with MODEL_CUSTOM – SampleStore API
 
 Welcome to the **SampleStore** onboarding project!  
 This task will introduce you to the powerful `.NET CLI` tool 
 [**DEFC.Util.RepoGen**](https://www.nuget.org/packages/DEFC.Util.RepoGen), 
-which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/RepoGen-Readme.md).
+which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Readme.md).
 # 📑 Table of Contents
 
 1. [🧩 Scenario Title](#-scenario-title)
@@ -45,10 +45,10 @@ You'll generate the necessary code structure without writing boilerplate reposit
 
 ### ✅ Step 1: Create the Database
 - Open SQL Server Management Studio (SSMS) or any SQL client.
-- [Run the script](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/tree/main/DB)
+- [Run the script](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/DB)
 - This creates tables `Products`, `ProductCategories`, `Orders`, `Customers`, `OrderItems` and a few stored procedures.
 ### ✅ Step 2: Open the API Project
-- Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/tree/main/SampleStore) solution in Visual Studio.
+- Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
 - Review the structure — **do not manually add repositories or services**.
 ### ✅ Step 3: Initialize the RepoGen tool
 - Open **Developer PowerShell for Visual Studio** *(recommended)* — provides better visualization and output formatting.
@@ -77,7 +77,7 @@ Please verify and update the following in the file:
 | `Namespace`             | ❌ Pending | Root namespace to be used for generated code                                                  | `SampleStore`            |
 | `FoldersStructureModel` | ✅ Set      | Structure model used for organizing the generated codebase                                   | `MODEL_CUSTOM`                |
 
-> ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and `MODEL_1` [see](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Custom-Model-README.md).
+> ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and `MODEL_1`.
 
 #### 📁 Example `RepoGen.json`
 
@@ -332,7 +332,7 @@ By completing this task, you will:
 ---
 
 ## 📩 Questions?
-If you're stuck or want feedback on your solution: Open a [GitHub Issue](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/issues) with your question
+If you're stuck or want feedback on your solution: Open a [GitHub Issue](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/issues) with your question
 
 ---
 
