@@ -3,7 +3,7 @@
 Welcome to the **SampleStore** onboarding project!  
 This task will introduce you to the powerful `.NET CLI` tool 
 [**DEFC.Util.RepoGen**](https://www.nuget.org/packages/DEFC.Util.RepoGen), 
-which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Readme.md).
+which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/README.md).
 # 📑 Table of Contents
 
 1. [🧩 Scenario Title](#-scenario-title)
@@ -82,7 +82,7 @@ dotnet tool run DEFC.Util.RepoGen initial
 ```
 ### ✅ Step 4: Review the Configuration
 
-[See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Readme.md#-repogenjson--tool-configuration)
+[See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/README.md#-repogenjson--tool-configuration)
 
 #### 🔧 RepoGen Configuration Checklist
 
