@@ -276,6 +276,11 @@ Look inside the following folders:
 - Services
 - DTOs
 - Find the auto-generated ProductsRepository, UnitOfWork, etc.
+
+| MODEL_CUSTOM (This images based on model customized in this sample)                 |
+|-------------------------|
+|![MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_CUSTOM_Store.png)|
+
 ##  ✅ Step 11: Configure your application
 This based on your application requirements.
 - Confuger database connection string in `appsettings.json` file.
