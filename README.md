@@ -27,6 +27,7 @@ which automates repository and Unit of Work generation using **SQL Server stored
    - [Challenge 2: Remove Stored Procedure](#-challenge-2-remove-stored-procedure)
    - [Challenge 3: Force Overwrite Using --force or -f](#-challenge-3-force-overwrite-using---force-or--f)
    - [Challenge 4: Change Structure Model](#-challenge-4-change-structure-model)
+   - [Challenge 5: Change Structure Model to MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md)
 7. [🎯 Learning Objectives](#-learning-objectives)
 8. [📩 Questions?](#-questions)
 9. [🎯 Learning Outcome](#-learning-outcome)
