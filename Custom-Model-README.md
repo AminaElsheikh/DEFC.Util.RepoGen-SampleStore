@@ -137,7 +137,7 @@ Please verify and update the following in the file:
     "IRepositories": "Interfaces", // Interfaces for repositories
     "Models": "Entities", // Domain models or entities
     "Repositories": "Repositories", // Concrete repository implementations
-    "Services": "UseCases", // Business logic, organized by use cases
+    "Services": "Services", // Business logic, organized by use cases
     "UnitOfWork": "UnitOfWork" // Unit of Work pattern implementation
   }
 }
