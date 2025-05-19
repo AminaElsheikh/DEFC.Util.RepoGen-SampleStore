@@ -257,13 +257,13 @@ Look inside the following folders:
 
 | MODEL_1                 | MODEL_2            |
 |-------------------------|--------------------|
-|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_1_Store.png)|![MODEL_2](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_2_Store.png)|
+|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|
 
 
 
 | MODEL_3            | MODEL_CUSTOM       |
 |--------------------|--------------------|
-|![MODEL_3](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_3_Store.png)|![MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/MODEL_CUSTOM_Store.png)|
+|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|
 
 
 ##  ✅ Step 10: Configure your application
