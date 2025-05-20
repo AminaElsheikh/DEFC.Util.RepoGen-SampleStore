@@ -107,7 +107,7 @@ Please verify and update the following in the file:
 
   "Structure": [
     {
-      "Name": "Core",
+      "Name": "Domain",
       "Children": [
         { "Name": "Entities" }, // For Models
         { "Name": "Interfaces" } // For IRepositories
