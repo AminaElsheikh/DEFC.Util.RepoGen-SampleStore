@@ -55,15 +55,7 @@ Make sure the following are installed:
 
 - SQL Server
 - [.NET 6 SDK or newer](https://dotnet.microsoft.com/download)
-    - `Microsoft.Data.SqlClient`
-    - `Microsoft.EntityFrameworkCore.SqlServer`
-    - `Microsoft.EntityFrameworkCore`
-    - `DEFC.Util.RepoGen`
-      ```bash
-      dotnet add package DEFC.Util.RepoGen --version 1.0.0
-      ```
-
----
+----    
 
 ## 🚀 Steps to Complete the Task
 
