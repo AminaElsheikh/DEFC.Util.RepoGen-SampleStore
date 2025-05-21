@@ -346,7 +346,7 @@ END
 dotnet tool run RepoGen re-map --sp sp_CreateCustomer --repo Customers
 ```
 4. **Verify updates**
-- Open `sp_CreateCustomer_DTO` class and confirm the `PhoneNumber` field is included.
+- Open `sp_CreateCustomerDto` class and confirm the `PhoneNumber` field is included.
 - Open `Customers` repository and ensure the changes have been correctly applied.
 
 ### 🧱 Challenge 2: Remove Stored Procedure
