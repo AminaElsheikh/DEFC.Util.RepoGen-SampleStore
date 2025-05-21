@@ -101,6 +101,7 @@ Please verify and update the following in the file:
 
 - Set your required folder structure as you want in `custom_model.json` file in path `SampleStore/RepoGenTool/Structure`
 ```json
+
 {
   //"This file defines the standard project folder structure and required mappings for validation.
   //"You may add extra folders, but required folders must exist in the hierarchy.
@@ -130,6 +131,7 @@ Please verify and update the following in the file:
     }
   ]
 }
+
 
 ```
 - Map the tool basic file in `structure_mapper.json` file in path `SampleStore/RepoGenTool/Structure`
@@ -265,7 +267,7 @@ dotnet tool run RepoGen add --batch batch-orderitems
   ]
 }
 ```
-- Run batch of commends from a JSON file:
+- Run batch of commands from a JSON file:
 ```bash
 dotnet tool run RepoGen batch --file batch-orderitems
 ``` 
@@ -285,6 +287,7 @@ Look inside the following folders:
 |-------------------------|
 |![MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_CUSTOM_Store.png)|
 
+ 
 ##  ✅ Step 11: Configure your application
 This based on your application requirements.
 - Confuger database connection string in `appsettings.json` file.
@@ -343,6 +346,7 @@ By completing this task, you will:
 ## 📩 Questions?
 If you're stuck or want feedback on your solution: Open a [GitHub Issue](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/issues) with your question
 > It’s helpful if you can also attach an image or screenshot of the issue to provide more context.
+
 ---
 
 ### 🎯 Learning Outcome
