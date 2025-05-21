@@ -342,7 +342,7 @@ By completing this task, you will:
 
 ## 📩 Questions?
 If you're stuck or want feedback on your solution: Open a [GitHub Issue](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/issues) with your question
-
+> It’s helpful if you can also attach an image or screenshot of the issue to provide more context.
 ---
 
 ### 🎯 Learning Outcome
