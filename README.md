@@ -12,15 +12,16 @@ which automates repository and Unit of Work generation using **SQL Server stored
 4. [🚀 Steps to Complete the Task](#-steps-to-complete-the-task)
    - [✅ Step 1: Create the Database](#-step-1-create-the-database)
    - [✅ Step 2: Open the API Project](#-step-2-open-the-api-project)
-   - [✅ Step 3: Initialize the RepoGen tool](#-step-3-initialize-the-repogen-tool)
-   - [✅ Step 4: Review the Configuration](#-step-4-review-the-configuration)
-   - [✅ Step 5: Set-up app folder structure](#-step-5-set-up-app-folder-structure)
-   - [✅ Step 6: Use CRUD option for ProductCategories](#-step-6-for-productcategories-table-will-use-crud-option)
-   - [✅ Step 7: Use Map option for Products, Orders, Customers](#-step-7-for-products-orders-customers-tables-will-use-map-option)
-   - [✅ Step 8: Use Batch option for OrderItems](#-step-8-for-orderitems-table-will-use-batch-option)
-   - [✅ Step 9: Explore the Generated Code](#-step-9-explore-the-generated-code--add-required-logics-and-validations)
-   - [✅ Step 10: Configure your application](#-step-10-configure-your-application)
-   - [✅ Step 11: Wire It to the API](#-step-11-wire-it-to-the-api)
+   - [✅ Step 3: Packages to be installed](#-step-3-packages-to-be-installed)
+   - [✅ Step 4: Initialize the RepoGen tool](#-step-4-initialize-the-repogen-tool)
+   - [✅ Step 5: Review the Configuration](#-step-5-review-the-configuration)
+   - [✅ Step 6: Set-up app folder structure](#-step-6-set-up-app-folder-structure)
+   - [✅ Step 7: Use CRUD option for ProductCategories](#-step-7-for-productcategories-table-will-use-crud-option)
+   - [✅ Step 8: Use Map option for Products, Orders, Customers](#-step-8-for-products-orders-customers-tables-will-use-map-option)
+   - [✅ Step 9: Use Batch option for OrderItems](#-step-9-for-orderitems-table-will-use-batch-option)
+   - [✅ Step 10: Explore the Generated Code](#-step-10-explore-the-generated-code--add-required-logics-and-validations)
+   - [✅ Step 11: Configure your application](#-step-11-configure-your-application)
+   - [✅ Step 12: Wire It to the API](#-step-12-wire-it-to-the-api)
 5. [📚 For More Tool Training](#-for-more-tool-training)
 6. [🧱 Challenges](#-challenge-1-remap-stored-procedure)
    - [Challenge 1: Remap Stored Procedure](#-challenge-1-remap-stored-procedure)
@@ -73,7 +74,18 @@ Make sure the following are installed:
 ### ✅ Step 2: Open the API Project
 - Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
 - Review the structure — **do not manually add repositories or services**.
-### ✅ Step 3: Initialize the RepoGen tool
+
+  
+### ✅ Step 3: Packages to be installed
+ - `Microsoft.Data.SqlClient`
+- `Microsoft.EntityFrameworkCore.SqlServer`
+- `Microsoft.EntityFrameworkCore`
+- `DEFC.Util.RepoGen`
+  ```bash
+  dotnet add package DEFC.Util.RepoGen --version 1.0.0
+  ```
+
+### ✅ Step 4: Initialize the RepoGen tool
 - Open **Developer PowerShell for Visual Studio** *(recommended)* — provides better visualization and output formatting.
     - (OR) **.NET CLI** from terminal or command prompt *(recommended)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
@@ -81,7 +93,7 @@ Make sure the following are installed:
 ```bash
 dotnet tool run DEFC.Util.RepoGen initial
 ```
-### ✅ Step 4: Review the Configuration
+### ✅ Step 5: Review the Configuration
 
 [See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/README.md#-repogenjson--tool-configuration)
 
@@ -120,7 +132,7 @@ Please verify and update the following in the file:
   }
 }
 ```
-### ✅ Step 5: Set-up app folder structure
+### ✅ Step 6: Set-up app folder structure
 
 ```bash
 dotnet tool run DEFC.Util.RepoGen structure set
@@ -133,12 +145,12 @@ dotnet tool run DEFC.Util.RepoGen structure set
 dotnet tool run DEFC.Util.RepoGen test db-connection
 ```
 
-### ✅ Step 6: For ProductCategories table will use CRUD option
+### ✅ Step 7: For ProductCategories table will use CRUD option
 - use `crud` command with table `ProductCategories`: 
 ```bash
 dotnet tool run DEFC.Util.RepoGen crud --tbl ProductCategories --service ProductCategory
 ```
-### ✅ Step 7: For `Products`, `Orders`, `Customers` tables will use Map option
+### ✅ Step 8: For `Products`, `Orders`, `Customers` tables will use Map option
 - use	`add` for creating `Products`,`Customers` and `Orders` Repository:
 
 ```bash
@@ -170,7 +182,7 @@ dotnet tool run DEFC.Util.RepoGen map --sp sp_GetOrderById --repo Orders
 dotnet tool run DEFC.Util.RepoGen map --sp sp_UpdateOrder --repo Orders
 dotnet tool run DEFC.Util.RepoGen map --sp sp_DeleteOrder --repo Orders
 ```
-### ✅ Step 8: For `OrderItems` table will use batch option
+### ✅ Step 9: For `OrderItems` table will use batch option
 - Add batch file called `batch-orderitems`.
 ```bash
 dotnet tool run DEFC.Util.RepoGen add --batch batch-orderitems
@@ -245,7 +257,7 @@ dotnet tool run DEFC.Util.RepoGen batch --file batch-orderitems
 - This will: 
     - Create OrderItems reposatory.
     - Map stored procedures for OrderItems written in `batch-orderitems.json`.
-## ✅ Step 9: Explore the Generated Code & Add required logics and validations
+## ✅ Step 10: Explore the Generated Code & Add required logics and validations
 Look inside the following folders:
 
 - Repositories
@@ -259,7 +271,7 @@ Look inside the following folders:
 |-------------------------|--------------------|--------------------|
 |![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|![MODEL_2](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_2_Store.png)|![MODEL_3](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_3_Store.png)|
 
-##  ✅ Step 10: Configure your application
+##  ✅ Step 11: Configure your application
 This based on your application requirements.
 - Confuger database connection string in `appsettings.json` file.
 ```json
@@ -284,7 +296,7 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 ```
 - Add any other configurations needed.
 
-## ✅ Step 11: Wire It to the API
+## ✅ Step 12: Wire It to the API
 - Create a basic controllers called `Products`,`Customers` and `Orders`, etc.
 - Link them to unit of work class.
  ```C#
