@@ -4,6 +4,7 @@ Welcome to the **SampleStore** onboarding project!
 This task will introduce you to the powerful `.NET CLI` tool 
 [**DEFC.Util.RepoGen**](https://www.nuget.org/packages/DEFC.Util.RepoGen), 
 which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/README.md).
+
 # 📑 Table of Contents
 
 1. [🧩 Scenario Title](#-scenario-title)
@@ -54,8 +55,9 @@ You'll generate the necessary code structure without writing boilerplate reposit
 Make sure the following are installed:
 
 - SQL Server
-- [.NET 6 SDK or newer](https://dotnet.microsoft.com/download)
-----    
+- [.NET 6 SDK or newer](https://dotnet.microsoft.com/download)   
+
+---
 
 ## 🚀 Steps to Complete the Task
 
@@ -67,14 +69,13 @@ Make sure the following are installed:
 - Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
 - Review the structure — **do not manually add repositories or services**.
 
-  
 ### ✅ Step 3: Packages to be installed
  - `Microsoft.Data.SqlClient`
 - `Microsoft.EntityFrameworkCore.SqlServer`
 - `Microsoft.EntityFrameworkCore`
 - `DEFC.Util.RepoGen`
   ```bash
-  dotnet add package DEFC.Util.RepoGen --version 1.0.0
+  dotnet add package DEFC.Util.RepoGen --version 1.0.0-beta
   ```
 
 ### ✅ Step 4: Initialize the RepoGen tool
@@ -104,7 +105,7 @@ Please verify and update the following in the file:
 | `Namespace`             | ❌ Pending | Root namespace to be used for generated code                                                  | `SampleStore`            |
 | `FoldersStructureModel` | ✅ Set      | Structure model used for organizing the generated codebase                                   | `MODEL_1`                |
 
- > ℹ️ **Note:** Other folder models include [`MODEL_2`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), [`MODEL_3`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), and [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
+> ℹ️ **Note:** Other folder models include [`MODEL_2`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), [`MODEL_3`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), and [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
 
 #### 📁 Example `RepoGen.json`
 
@@ -242,7 +243,7 @@ dotnet tool run RepoGen add --batch batch-orderitems
   ]
 }
 ```
-- Run batch of commends from a JSON file:
+- Run batch of commands from a JSON file:
 ```bash
 dotnet tool run RepoGen batch --file batch-orderitems
 ``` 
@@ -257,12 +258,13 @@ Look inside the following folders:
 - Services
 - DTOs
 - Find the auto-generated ProductsRepository, UnitOfWork, etc.
- 
+
 
 | MODEL_1                 | MODEL_2            | MODEL_3            |
 |-------------------------|--------------------|--------------------|
 |![MODEL_1](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_1_Store.png)|![MODEL_2](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_2_Store.png)|![MODEL_3](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_3_Store.png)|
 
+ 
 ##  ✅ Step 11: Configure your application
 This based on your application requirements.
 - Confuger database connection string in `appsettings.json` file.
@@ -346,7 +348,7 @@ dotnet tool run RepoGen re-map --sp sp_CreateCustomer --repo Customers
    We want to remove the `sp_DeleteOrder` stored procedure mapping.
 2. **Use `remove` command to remove the mapped stored procedure**
 ```bash
-   dotnet tool run RepoGen remove --sp sp_DeleteOrder --repo Orders
+dotnet tool run RepoGen remove --sp sp_DeleteOrder --repo Orders
 ```
 ### 🧱 Challenge 3: Force Overwrite Using --force or -f
 - Try regenerating a CRUD layer for an existing table with the force option:
@@ -363,23 +365,23 @@ dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory -
 - Try using `MODEL_2` (Layered), (Hexagonal) `MODEL_3` (Hexagonal) or [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md) and observe code layout changes.
 > ⚠️ This Challenge is the most critical
 1. Manually delete(or keep aside) previously generated folders (to avoid conflicts):
-    ```bash
-    # Delete folders like Services, Repositories, etc.
-    ```
+```bash
+# Delete folders like Services, Repositories, etc.
+```
 2. Open `RepoGen.json` and update the structure model:
-    ```json
-    {
-      "FoldersStructureModel": "MODEL_2"
-    }
-    ```
+```json
+{
+  "FoldersStructureModel": "MODEL_2"
+}
+```
 3. Re-run the folder setup:
-    ```bash
-    dotnet tool run RepoGen structure set
-    ```
+```bash
+dotnet tool run RepoGen structure set
+```
 4. Re-run the batch setup:
-    ```bash
-    dotnet tool run RepoGen batch --file batch-orderitems
-    ```
+```bash
+dotnet tool run RepoGen batch --file batch-orderitems
+```
 5. Observe how the folder layout and organization differ from `MODEL_1`.
 
 > 🔁 You can also try `MODEL_3` (Hexagonal) or define your own using [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
@@ -398,7 +400,6 @@ By completing this task, you will:
 
 ## 📩 Questions?
 If you're stuck or want feedback on your solution: Open a [GitHub Issue](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/issues) with your question
-
 > It’s helpful if you can also attach an image or screenshot of the issue to provide more context.
 
 ---
