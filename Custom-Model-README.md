@@ -56,7 +56,7 @@ You'll generate the necessary code structure without writing boilerplate reposit
     - (OR) **Package Manager Console** in Visual Studio.
 - Write the initialization command below
 ```bash
-dotnet tool run DEFC.Util.RepoGen initial
+dotnet tool run RepoGen initial
 ```
 ### ✅ Step 4: Review the Configuration
 
@@ -149,7 +149,7 @@ Please verify and update the following in the file:
 ### ✅ Step 6: Set-up app folder structure to CUSTOM_MODEL
 
 ```bash
-dotnet tool run DEFC.Util.RepoGen structure set
+dotnet tool run RepoGen structure set
 ```
 
 #### ⚠️ Important Notes
@@ -157,50 +157,50 @@ dotnet tool run DEFC.Util.RepoGen structure set
 
 - To confirm if the connection string in `RepoGen.json` is working:
 ```bash
-dotnet tool run DEFC.Util.RepoGen test db-connection
+dotnet tool run RepoGen test db-connection
 ```
 
 ### ✅ Step 7: For ProductCategories table will use CRUD option
 - use `crud` command with table `ProductCategories`: 
 ```bash
-dotnet tool run DEFC.Util.RepoGen crud --tbl ProductCategories --service ProductCategory
+dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory
 ```
 ### ✅ Step 8: For `Products`, `Orders`, `Customers` tables will use Map option
 - use	`add` for creating `Products`,`Customers` and `Orders` Repository:
 
 ```bash
-dotnet tool run DEFC.Util.RepoGen add --repo Products
-dotnet tool run DEFC.Util.RepoGen add --repo Customers
-dotnet tool run DEFC.Util.RepoGen add --repo Orders
+dotnet tool run RepoGen add --repo Products
+dotnet tool run RepoGen add --repo Customers
+dotnet tool run RepoGen add --repo Orders
 ```
 - use `map` command `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
 ```bash
-dotnet tool run DEFC.Util.RepoGen map --sp sp_CreateProduct --repo Products
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetAllProducts --repo Products
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetProductById --repo Products
-dotnet tool run DEFC.Util.RepoGen map --sp sp_UpdateProduct --repo Products
-dotnet tool run DEFC.Util.RepoGen map --sp sp_DeleteProduct --repo Products
+dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products
+dotnet tool run RepoGen map --sp sp_GetAllProducts --repo Products
+dotnet tool run RepoGen map --sp sp_GetProductById --repo Products
+dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products
+dotnet tool run RepoGen map --sp sp_DeleteProduct --repo Products
 ```
 - use `map` command `sp_CreateCustomer`,`sp_GetAllCustomers`,`sp_GetCustomerById`,`sp_UpdateCustomer` and `sp_DeleteCustomer` stored procedures: 
 ```bash
-dotnet tool run DEFC.Util.RepoGen map --sp sp_CreateCustomer --repo Customers
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetAllCustomers --repo Customers
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetCustomerById --repo Customers
-dotnet tool run DEFC.Util.RepoGen map --sp sp_UpdateCustomer --repo Customers
-dotnet tool run DEFC.Util.RepoGen map --sp sp_DeleteCustomer --repo Customers
+dotnet tool run RepoGen map --sp sp_CreateCustomer --repo Customers
+dotnet tool run RepoGen map --sp sp_GetAllCustomers --repo Customers
+dotnet tool run RepoGen map --sp sp_GetCustomerById --repo Customers
+dotnet tool run RepoGen map --sp sp_UpdateCustomer --repo Customers
+dotnet tool run RepoGen map --sp sp_DeleteCustomer --repo Customers
 ```
 - use `map` command `sp_CreateOrder`,`sp_GetAllOrders`,`sp_GetOrderById`,`sp_UpdateOrder` and `sp_DeleteOrder` stored procedures: 
 ```bash
-dotnet tool run DEFC.Util.RepoGen map --sp sp_CreateOrder --repo Orders
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetAllOrders --repo Orders
-dotnet tool run DEFC.Util.RepoGen map --sp sp_GetOrderById --repo Orders
-dotnet tool run DEFC.Util.RepoGen map --sp sp_UpdateOrder --repo Orders
-dotnet tool run DEFC.Util.RepoGen map --sp sp_DeleteOrder --repo Orders
+dotnet tool run RepoGen map --sp sp_CreateOrder --repo Orders
+dotnet tool run RepoGen map --sp sp_GetAllOrders --repo Orders
+dotnet tool run RepoGen map --sp sp_GetOrderById --repo Orders
+dotnet tool run RepoGen map --sp sp_UpdateOrder --repo Orders
+dotnet tool run RepoGen map --sp sp_DeleteOrder --repo Orders
 ```
 ### ✅ Step 9: For `OrderItems` table will use batch option
 - Add batch file called `batch-orderitems`.
 ```bash
-dotnet tool run DEFC.Util.RepoGen add --batch batch-orderitems
+dotnet tool run RepoGen add --batch batch-orderitems
 ```
 - Generated file location **Path:** `SampleStore/RepoGenTool/Batches/batch-orderitems.json`.
 - The generated file will include **sample nodes** like below:
@@ -267,7 +267,7 @@ dotnet tool run DEFC.Util.RepoGen add --batch batch-orderitems
 ```
 - Run batch of commends from a JSON file:
 ```bash
-dotnet tool run DEFC.Util.RepoGen batch --file batch-orderitems
+dotnet tool run RepoGen batch --file batch-orderitems
 ``` 
 - This will: 
     - Create OrderItems reposatory.
