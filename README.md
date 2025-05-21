@@ -112,7 +112,7 @@ Please verify and update the following in the file:
 | `Namespace`             | ❌ Pending | Root namespace to be used for generated code                                                  | `SampleStore`            |
 | `FoldersStructureModel` | ✅ Set      | Structure model used for organizing the generated codebase                                   | `MODEL_1`                |
 
-> ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
+ > ℹ️ **Note:** Other folder models include [`MODEL_2`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), [`MODEL_3`](#-step-10-explore-the-generated-code--add-required-logics-and-validations), and [`MODEL_CUSTOM`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md).
 
 #### 📁 Example `RepoGen.json`
 
