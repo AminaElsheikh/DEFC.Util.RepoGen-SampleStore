@@ -33,6 +33,7 @@ which automates repository and Unit of Work generation using **SQL Server stored
 7. [🎯 Learning Objectives](#-learning-objectives)
 8. [📩 Questions?](#-questions)
 9. [🎯 Learning Outcome](#-learning-outcome)
+10. [❓ FAQ](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/FAQ.md)
 
 ---
 
