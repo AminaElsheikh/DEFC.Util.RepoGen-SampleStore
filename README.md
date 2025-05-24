@@ -26,7 +26,7 @@ which automates repository and Unit of Work generation using **SQL Server stored
 5. [📚 For More Tool Training](#-for-more-tool-training)
 6. [🧱 Challenges](#-challenge-1-remap-stored-procedure)
    - [Challenge 1: Remap Stored Procedure](#-challenge-1-remap-stored-procedure)
-   - [Challenge 2: Remove Stored Procedure](#-challenge-2-remove-stored-procedure)
+   - [Challenge 2: Remove Stored Procedure Mapping](#-challenge-2-remove-stored-procedure-mapping)
    - [Challenge 3: Force Overwrite Using --force or -f](#-challenge-3-force-overwrite-using---force-or--f)
    - [Challenge 4: Change Structure Model](#-challenge-4-change-structure-model)
    - [Challenge 5: Change Structure Model to MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Custom-Model-README.md)
@@ -152,7 +152,7 @@ dotnet tool run RepoGen add --repo Products
 dotnet tool run RepoGen add --repo Customers
 dotnet tool run RepoGen add --repo Orders
 ```
-- use `map` command `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
+- use `map` command with `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
 ```bash
 dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products
 dotnet tool run RepoGen map --sp sp_GetAllProducts --repo Products
@@ -160,7 +160,17 @@ dotnet tool run RepoGen map --sp sp_GetProductById --repo Products
 dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products
 dotnet tool run RepoGen map --sp sp_DeleteProduct --repo Products
 ```
-- use `map` command `sp_CreateCustomer`,`sp_GetAllCustomers`,`sp_GetCustomerById`,`sp_UpdateCustomer` and `sp_DeleteCustomer` stored procedures: 
+
+> To remap, use the `remap` command as shown below:
+```bash
+dotnet tool run RepoGen re-map --sp sp_CreateProduct --repo Products
+```
+> To remove, use the `remove` command as shown below:
+```bash
+dotnet tool run RepoGen remove --sp sp_CreateProduct --repo Products
+```
+
+- use `map` command with `sp_CreateCustomer`,`sp_GetAllCustomers`,`sp_GetCustomerById`,`sp_UpdateCustomer` and `sp_DeleteCustomer` stored procedures: 
 ```bash
 dotnet tool run RepoGen map --sp sp_CreateCustomer --repo Customers
 dotnet tool run RepoGen map --sp sp_GetAllCustomers --repo Customers
@@ -168,7 +178,7 @@ dotnet tool run RepoGen map --sp sp_GetCustomerById --repo Customers
 dotnet tool run RepoGen map --sp sp_UpdateCustomer --repo Customers
 dotnet tool run RepoGen map --sp sp_DeleteCustomer --repo Customers
 ```
-- use `map` command `sp_CreateOrder`,`sp_GetAllOrders`,`sp_GetOrderById`,`sp_UpdateOrder` and `sp_DeleteOrder` stored procedures: 
+- use `map` command with `sp_CreateOrder`,`sp_GetAllOrders`,`sp_GetOrderById`,`sp_UpdateOrder` and `sp_DeleteOrder` stored procedures: 
 ```bash
 dotnet tool run RepoGen map --sp sp_CreateOrder --repo Orders
 dotnet tool run RepoGen map --sp sp_GetAllOrders --repo Orders
@@ -344,7 +354,7 @@ dotnet tool run RepoGen re-map --sp sp_CreateCustomer --repo Customers
 - Open `sp_CreateCustomerDto` class and confirm the `PhoneNumber` field is included.
 - Open `Customers` repository and ensure the changes have been correctly applied.
 
-### 🧱 Challenge 2: Remove Stored Procedure
+### 🧱 Challenge 2: Remove Stored Procedure Mapping
 1. **Assumption:**  
    We want to remove the `sp_DeleteOrder` stored procedure mapping.
 2. **Use `remove` command to remove the mapped stored procedure**
