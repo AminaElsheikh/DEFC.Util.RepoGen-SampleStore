@@ -80,8 +80,8 @@ Make sure the following are installed:
   ```
 
 ### ✅ Step 4: Initialize the RepoGen tool
-- Open **Developer PowerShell for Visual Studio** *(recommended)* — provides better visualization and output formatting.
-    - (OR) **.NET CLI** from terminal or command prompt *(recommended)* — provides better visualization and output formatting.		
+- Open **Developer PowerShell for Visual Studio** *(`recommended`)* — provides better visualization and output formatting.
+    - (OR) **.NET CLI** from terminal or command prompt *(`recommended`)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
 - Write the initialization command below
 ```bash
@@ -161,11 +161,11 @@ dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products
 dotnet tool run RepoGen map --sp sp_DeleteProduct --repo Products
 ```
 
-> To remap, use the `remap` command as shown below:
+> **Note:** To remap, use the `remap` command as shown below:
 ```bash
 dotnet tool run RepoGen re-map --sp sp_CreateProduct --repo Products
 ```
-> To remove, use the `remove` command as shown below:
+> **Note:** To remove, use the `remove` command as shown below:
 ```bash
 dotnet tool run RepoGen remove --sp sp_CreateProduct --repo Products
 ```
