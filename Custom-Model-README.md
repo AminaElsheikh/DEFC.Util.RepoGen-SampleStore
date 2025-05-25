@@ -52,8 +52,8 @@ You'll generate the necessary code structure without writing boilerplate reposit
 - Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
 - Review the structure — **do not manually add repositories or services**.
 ### ✅ Step 3: Initialize the RepoGen tool
-- Open **Developer PowerShell for Visual Studio** *(recommended)* — provides better visualization and output formatting.
-    - (OR) **.NET CLI** from terminal or command prompt *(recommended)* — provides better visualization and output formatting.		
+- Open **Developer PowerShell for Visual Studio** *(`recommended`)* — provides better visualization and output formatting.
+    - (OR) **.NET CLI** from terminal or command prompt *(`recommended`)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
 - Write the initialization command below
 ```bash
