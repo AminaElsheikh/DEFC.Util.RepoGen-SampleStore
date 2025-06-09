@@ -162,19 +162,26 @@ dotnet tool run RepoGen add --repo Customers
 dotnet tool run RepoGen add --repo Orders
 ```
 - use `map` command with `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
+  - Map using full command
 ```bash
-// Map using full command
 dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products --controller Products --endpoint CreateProduct --post
-// Using command shorthads (see shorthands table in wiki)[https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki/RepoGen-CLI-Shorthands-Table]
+```
+  - Using command shorthads (see shorthands table in wiki)[https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki/RepoGen-CLI-Shorthands-Table]
+```bash
 dotnet tool run RepoGen map -sp sp_GetAllProducts -r Products -c Products -ep GetAllProducts -g 
-// Mix between full commands and shorthands
+```
+  - Mix between full commands and shorthands
+```bash
 dotnet tool run RepoGen map --sp sp_GetProductById --repo Products -c Products --endpoint GetProductById --get
-// By defult will take Products as controller name and sp_UpdateProduct as endpoint name
+```
+  - By defult will take Products as controller name and sp_UpdateProduct as endpoint name
+```bash
 dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products --put
-// By defult will take Products as controller name
+```
+  - By defult will take Products as controller name
+```bash
 dotnet tool run RepoGen map -sp sp_DeleteProduct -r Products -ep DeleteProduct -delete
 ```
-
 > **Note:** To remap, use the `remap` command as shown below:
 ```bash
 dotnet tool run RepoGen re-map --sp sp_CreateProduct --repo Products
