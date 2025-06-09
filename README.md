@@ -162,7 +162,7 @@ dotnet tool run RepoGen add --repo Customers
 dotnet tool run RepoGen add --repo Orders
 ```
 - use `map` command with `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
-  - Map using full command
+    - Map using full command
 ```bash
 dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products --controller Products --endpoint CreateProduct --post
 ```
