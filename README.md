@@ -83,6 +83,10 @@ Make sure the following are installed:
 - Open **Developer PowerShell for Visual Studio** *(`recommended`)* — provides better visualization and output formatting.
     - (OR) **.NET CLI** from terminal or command prompt *(`recommended`)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
+
+> 💡 **Important:** For best experience and readability, use **Developer PowerShell** or **.NET CLI**.
+![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/CLI.png)
+
 - Write the initialization command below
 ```bash
 dotnet tool run RepoGen initial
@@ -140,7 +144,12 @@ dotnet tool run RepoGen test db-connection
 ```
 
 ### ✅ Step 7: For ProductCategories table will use CRUD option
-- use `crud` command with table `ProductCategories`: 
+
+- **Option 1:** *(Recommended)* use `crud` command with table `ProductCategories` with endpoint generator:  
+```bash
+dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory --controller ProductCategory
+```
+- **Option 2:** use `crud` command with table `ProductCategories`:  
 ```bash
 dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory
 ```
