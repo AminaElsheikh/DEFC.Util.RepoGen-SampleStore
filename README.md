@@ -182,7 +182,7 @@ dotnet tool run RepoGen add --repo Orders
     ```
   - By defult will take Products as controller name
     ```bash
-    dotnet tool run RepoGen map -sp sp_DeleteProduct -r Products -ep DeleteProduct -delete
+    dotnet tool run RepoGen map -sp sp_DeleteProduct -r Products -ep DeleteProduct --delete
     ```
 
 > **Note:** To remap, use the `remap` command as shown below:
