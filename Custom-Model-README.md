@@ -3,7 +3,7 @@
 Welcome to the **SampleStore** onboarding project!  
 This task will introduce you to the powerful `.NET CLI` tool 
 [**DEFC.Util.RepoGen**](https://www.nuget.org/packages/DEFC.Util.RepoGen), 
-which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/README.md).
+which automates repository and Unit of Work generation using **SQL Server stored procedures** [See RepoGen tool documentation](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki).
 # 📑 Table of Contents
 
 1. [🧩 Scenario Title](#-scenario-title)
@@ -11,20 +11,20 @@ which automates repository and Unit of Work generation using **SQL Server stored
 3. [🚀 Steps to Complete the Task](#-steps-to-complete-the-task)
    - [✅ Step 1: Create the Database](#-step-1-create-the-database)
    - [✅ Step 2: Open the API Project](#-step-2-open-the-api-project)
-   - [✅ Step 3: Initialize the RepoGen tool](#-step-3-initialize-the-repogen-tool)
-   - [✅ Step 4: Review the Configuration](#-step-4-review-the-configuration)
-   - [✅ Step 5: Custmize the model](#-step-5-custmize-the-model)
-   - [✅ Step 6: Set-up app folder structure to CUSTOM_MODEL](#-step-6-set-up-app-folder-structure-to-custom_model)
-   - [✅ Step 7: Use CRUD option for ProductCategories](#-step-7-for-productcategories-table-will-use-crud-option)
-   - [✅ Step 8: Use Map option for Products, Orders, Customers](#-step-8-for-products-orders-customers-tables-will-use-map-option)
-   - [✅ Step 9: Use Batch option for OrderItems](#-step-9-for-orderitems-table-will-use-batch-option)
-   - [✅ Step 10: Explore the Generated Code](#-step-10-explore-the-generated-code--add-required-logics-and-validations)
-   - [✅ Step 11: Configure your application](#-step-11-configure-your-application)
-   - [✅ Step 12: Wire It to the API](#-step-12-wire-it-to-the-api)
+   - [✅ Step 3: Packages to be installed](#-step-3-packages-to-be-installed)
+   - [✅ Step 4: Initialize the RepoGen tool](#-step-4-initialize-the-repogen-tool)
+   - [✅ Step 5: Review the Configuration](#-step-5-review-the-configuration)
+   - [✅ Step 6: Custmize the model](#-step-6-custmize-the-model)
+   - [✅ Step 7: Set-up app folder structure to CUSTOM_MODEL](#-step-7-set-up-app-folder-structure-to-custom_model)
+   - [✅ Step 8: Use CRUD option for ProductCategories](#-step-8-for-productcategories-table-will-use-crud-option)
+   - [✅ Step 9: Use Map option for Products, Orders, Customers](#-step-9-for-products-orders-customers-tables-will-use-map-option)
+   - [✅ Step 10: Use Batch option for OrderItems](#-step-10-for-orderitems-table-will-use-batch-option)
+   - [✅ Step 11: Explore the Generated Code](#-step-11-explore-the-generated-code--add-required-logics-and-validations)
+   - [✅ Step 12: Configure your application](#-step-12-configure-your-application)
 4. [🎯 Learning Objectives](#-learning-objectives)
 5. [📩 Questions?](#-questions)
 6. [🎯 Learning Outcome](#-learning-outcome)
-7. [❓ FAQ](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/FAQ.md)
+7. [❓ FAQ](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki/FAQ)
 
 ---
 
@@ -35,9 +35,9 @@ which automates repository and Unit of Work generation using **SQL Server stored
 You've joined the backend team of an online platform called **SampleStore**.  
 Your goal is to set up the data access layer using `DEFC.Util.RepoGen`, based on:
 
-- A sample SQL Server database (`SampleStore.sql`) that creates the store database with tables like 
+- A sample SQL Server database ([`SampleStore.sql`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/DB)) that creates the store database with tables like 
   `Products`, `ProductCategories`, `Orders`, `Customers`,`OrderItems` and stored procedures.
-- A .NET Core API skeleton project (`SampleStore`)
+- A .NET Core API skeleton project ([`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore))
 You'll generate the necessary code structure without writing boilerplate repositories or services manually!
 
 ---
@@ -49,23 +49,38 @@ You'll generate the necessary code structure without writing boilerplate reposit
 - [Run the script](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/DB)
 - This creates tables `Products`, `ProductCategories`, `Orders`, `Customers`, `OrderItems` and a few stored procedures.
 ### ✅ Step 2: Open the API Project
-- Open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
+- Frok and open the [`SampleStore`](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/tree/main/SampleStore) solution in Visual Studio.
 - Review the structure — **do not manually add repositories or services**.
-### ✅ Step 3: Initialize the RepoGen tool
+
+
+### ✅ Step 3: Packages to be installed
+ - `Microsoft.Data.SqlClient`
+- `Microsoft.EntityFrameworkCore.SqlServer`
+- `Microsoft.EntityFrameworkCore`
+- `DEFC.Util.RepoGen`
+  ```bash
+  dotnet add package DEFC.Util.RepoGen --version 1.0.0-beta
+  ```
+
+### ✅ Step 4: Initialize the RepoGen tool
 - Open **Developer PowerShell for Visual Studio** *(`recommended`)* — provides better visualization and output formatting.
     - (OR) **.NET CLI** from terminal or command prompt *(`recommended`)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
+
+> 💡 **Important:** For best experience and readability, use **Developer PowerShell** or **.NET CLI**.
+![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/CLI.png)
+
 - Write the initialization command below
 ```bash
 dotnet tool run RepoGen initial
 ```
-### ✅ Step 4: Review the Configuration
+### ✅ Step 5: Review the Configuration
 
-[See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/RepoGen-Readme.md#-repogenjson--tool-configuration)
+[See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki/Configuration)
 
 #### 🔧 RepoGen Configuration Checklist
 
-Please verify and update the following in the file:
+Verify and update the following in the `RepoGen.json` file:
 
 **Path:** `SampleStore/RepoGenTool/RepoGen.json`
 
@@ -77,6 +92,8 @@ Please verify and update the following in the file:
 | `DBContextName`         | ❌ Pending | Base name for the `DbContext` (suffix `DBContext` will be added automatically)               | `Store`                  |
 | `Namespace`             | ❌ Pending | Root namespace to be used for generated code                                                  | `SampleStore`            |
 | `FoldersStructureModel` | ✅ Set      | Structure model used for organizing the generated codebase                                   | `MODEL_CUSTOM`                |
+| `Model` | ✅ Set      | Suffix for domain or entity classes                                   | `Entities`                |
+| `DTO` | ✅ Set      | Suffix for data transfer objects                                  | `Reuests`                |
 
 > ℹ️ **Note:** Other folder models include `MODEL_2`, `MODEL_3`, and `MODEL_1`.
 
@@ -88,17 +105,23 @@ Please verify and update the following in the file:
     "DBConfig": {
       "SchemaID": "1",
       "DBContextName": "Store",
+          // TO DO: Apply your connection data
       "ConnectionString": "Server=localhost;Database=SampleStore;User Id=admin;Password=secret;TrustServerCertificate=True"
     },
     "AppConfig": {
       "Namespace": "SampleStore",
       "FoldersStructureModel": "MODEL_CUSTOM",
-      "LoggerCode": "101"
+      "LoggerCode": "101",
+      "Suffixes": {
+        "Model": "Entity",
+        "DTO": "Reuest"
+ 
+      }
     }
   }
 }
 ```
-### ✅ Step 5: Custmize the model
+### ✅ Step 6: Custmize the model
 
 - Set your required folder structure as you want in `custom_model.json` file in path `SampleStore/RepoGenTool/Structure`
 ```json
@@ -118,7 +141,7 @@ Please verify and update the following in the file:
     {
       "Name": "Infrastructure",
       "Children": [
-        { "Name": "Persistence" }, // For DBContext
+        { "Name": "DBContext" }, // For DBContext
         { "Name": "Repositories" }, // For Repositories
         { "Name": "UnitOfWork" } // For UnitOfWork
       ]
@@ -127,7 +150,7 @@ Please verify and update the following in the file:
       "Name": "Application",
       "Children": [
         { "Name": "Services" }, // For Services
-        { "Name": "DTOs" } // For DTOs
+        { "Name": "Requests" } // For DTOs
       ]
     }
   ]
@@ -139,8 +162,8 @@ Please verify and update the following in the file:
 ```json
 {
   "RequiredMappings": {
-    "DBContext": "Persistence", // AppDbContext.cs usually resides here
-    "DTOs": "DTOs", // Data Transfer Objects used by use cases
+    "DBContext": "DBContext", // AppDbContext.cs usually resides here
+    "DTOs": "Requests", // Data Transfer Objects used by use cases
     "IRepositories": "Interfaces", // Interfaces for repositories
     "Models": "Entities", // Domain models or entities
     "Repositories": "Repositories", // Concrete repository implementations
@@ -149,7 +172,7 @@ Please verify and update the following in the file:
   }
 }
 ```
-### ✅ Step 6: Set-up app folder structure to CUSTOM_MODEL
+### ✅ Step 7: Set-up app folder structure to CUSTOM_MODEL
 
 ```bash
 dotnet tool run RepoGen structure set
@@ -163,12 +186,18 @@ dotnet tool run RepoGen structure set
 dotnet tool run RepoGen test db-connection
 ```
 
-### ✅ Step 7: For ProductCategories table will use CRUD option
-- use `crud` command with table `ProductCategories`: 
+### ✅ Step 8: For ProductCategories table will use CRUD option
+
+- **Option 1:** *(Recommended)* use `crud` command with table `ProductCategories` with endpoint generator:  
+```bash
+dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory --controller ProductCategory
+```
+- **Option 2:** use `crud` command with table `ProductCategories`:  
 ```bash
 dotnet tool run RepoGen crud --tbl ProductCategories --service ProductCategory
 ```
-### ✅ Step 8: For `Products`, `Orders`, `Customers` tables will use Map option
+
+### ✅ Step 9: For `Products`, `Orders`, `Customers` tables will use Map option
 - use	`add` for creating `Products`,`Customers` and `Orders` Repository:
 
 ```bash
@@ -176,31 +205,32 @@ dotnet tool run RepoGen add --repo Products
 dotnet tool run RepoGen add --repo Customers
 dotnet tool run RepoGen add --repo Orders
 ```
-- use `map` command `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
+- use `map` command with `sp_CreateProduct`,`sp_GetAllProducts`,`sp_GetProductById`,`sp_UpdateProduct` and `sp_DeleteProduct` stored procedures: 
 ```bash
-dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products
-dotnet tool run RepoGen map --sp sp_GetAllProducts --repo Products
-dotnet tool run RepoGen map --sp sp_GetProductById --repo Products
-dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products
-dotnet tool run RepoGen map --sp sp_DeleteProduct --repo Products
-```
-- use `map` command `sp_CreateCustomer`,`sp_GetAllCustomers`,`sp_GetCustomerById`,`sp_UpdateCustomer` and `sp_DeleteCustomer` stored procedures: 
+dotnet tool run RepoGen map --sp sp_CreateProduct --repo Products --controller Products --endpoint CreateProduct --post
+dotnet tool run RepoGen map -sp sp_GetAllProducts -r Products -c Products -ep GetAllProducts -g 
+dotnet tool run RepoGen map --sp sp_GetProductById --repo Products -c Products --endpoint GetProductById --get
+dotnet tool run RepoGen map --sp sp_UpdateProduct --repo Products --put
+dotnet tool run RepoGen map -sp sp_DeleteProduct -r Products -ep DeleteProduct --delete
+```  
+
+- use `map` command with `sp_CreateCustomer`,`sp_GetAllCustomers`,`sp_GetCustomerById`,`sp_UpdateCustomer` and `sp_DeleteCustomer` stored procedures: 
 ```bash
-dotnet tool run RepoGen map --sp sp_CreateCustomer --repo Customers
-dotnet tool run RepoGen map --sp sp_GetAllCustomers --repo Customers
-dotnet tool run RepoGen map --sp sp_GetCustomerById --repo Customers
-dotnet tool run RepoGen map --sp sp_UpdateCustomer --repo Customers
-dotnet tool run RepoGen map --sp sp_DeleteCustomer --repo Customers
+dotnet tool run RepoGen map --sp sp_CreateCustomer --repo Customers --controller Customers --endpoint CreateCustomer --post
+dotnet tool run RepoGen map -sp sp_GetAllCustomers -r Customers -c Customers -ep GetAllCustomers -g 
+dotnet tool run RepoGen map --sp sp_GetCustomerById --repo Customers -c Customers --endpoint GetCustomerById --get
+dotnet tool run RepoGen map --sp sp_UpdateCustomer --repo Customers --put
+dotnet tool run RepoGen map -sp sp_DeleteCustomer -r Customers -ep DeleteCustomer --delete
 ```
-- use `map` command `sp_CreateOrder`,`sp_GetAllOrders`,`sp_GetOrderById`,`sp_UpdateOrder` and `sp_DeleteOrder` stored procedures: 
+- use `map` command with `sp_CreateOrder`,`sp_GetAllOrders`,`sp_GetOrderById`,`sp_UpdateOrder` and `sp_DeleteOrder` stored procedures: 
 ```bash
-dotnet tool run RepoGen map --sp sp_CreateOrder --repo Orders
-dotnet tool run RepoGen map --sp sp_GetAllOrders --repo Orders
-dotnet tool run RepoGen map --sp sp_GetOrderById --repo Orders
-dotnet tool run RepoGen map --sp sp_UpdateOrder --repo Orders
-dotnet tool run RepoGen map --sp sp_DeleteOrder --repo Orders
+dotnet tool run RepoGen map --sp sp_CreateOrder --repo Orders --controller Orders --endpoint CreateOrder --post
+dotnet tool run RepoGen map -sp sp_GetAllOrders -r Orders -c Orders -ep GetAllOrders -g 
+dotnet tool run RepoGen map --sp sp_GetOrderById --repo Orders -c Orders --endpoint GetOrderById --get
+dotnet tool run RepoGen map --sp sp_UpdateOrder --repo Orders -u
+dotnet tool run RepoGen map -sp sp_DeleteOrder -r Orders -ep DeleteOrder -d
 ```
-### ✅ Step 9: For `OrderItems` table will use batch option
+### ✅ Step 10: For `OrderItems` table will use batch option
 - Add batch file called `batch-orderitems`.
 ```bash
 dotnet tool run RepoGen add --batch batch-orderitems
@@ -214,6 +244,10 @@ dotnet tool run RepoGen add --batch batch-orderitems
     {
       "ID": "add-repo",
       "Command": "add --repo <YourRepoName>"
+    },
+    {
+      "ID": "map-insert-endpoint",
+      "Command": "map --sp <YourStoredProcedureName> --repo <YourRepoName> --controller <ControllerName> --endpoint <EndpointName> --<Method>"
     },
     {
       "ID": "map-insert",
@@ -236,7 +270,7 @@ dotnet tool run RepoGen add --batch batch-orderitems
   ]
 }
 ```
-- Change in this file to be lke below:
+ - Change in this file to be like below:
 ```json
 {
   "Commands": [
@@ -246,28 +280,29 @@ dotnet tool run RepoGen add --batch batch-orderitems
     },
     {
       "ID": "map-insert-OrderItems",
-      "Command": "map --sp sp_CreateOrderItem --repo OrderItems"
+      "Command": "map --sp sp_CreateOrderItem --repo OrderItems --controller OrderItems --endpoint CreateOrderItem -p"
     },
     {
       "ID": "map-update-OrderItems",
-      "Command": "map --sp sp_UpdateOrderItem --repo OrderItems"
+      "Command": "map --sp sp_UpdateOrderItem --repo OrderItems --endpoint UpdateOrderItem -u"
     },
     {
       "ID": "map-delete-OrderItems",
-      "Command": "map --sp sp_DeleteOrderItem --repo OrderItems"
+      "Command": "map --sp sp_DeleteOrderItem --repo OrderItems --controller OrderItems --endpoint DeleteOrderItem --delete"
     },
     {
       "ID": "map-get-OrderItems",
-      "Command": "map --sp sp_GetOrderItemById --repo OrderItems"
+      "Command": "map --sp sp_GetOrderItemById --repo OrderItems -g"
     },
     {
       "ID": "map-get-all-OrderItems",
-      "Command": "map --sp sp_GetAllOrderItems --repo OrderItems"
+      "Command": "map --sp sp_GetAllOrderItems --repo OrderItems -c OrderItems -ep GetAllOrderItems --get"
     }
 
   ]
 }
 ```
+
 - Run batch of commands from a JSON file:
 ```bash
 dotnet tool run RepoGen batch --file batch-orderitems
@@ -275,7 +310,7 @@ dotnet tool run RepoGen batch --file batch-orderitems
 - This will: 
     - Create OrderItems reposatory.
     - Map stored procedures for OrderItems written in `batch-orderitems.json`.
-## ✅ Step 10: Explore the Generated Code & Add required logics and validations
+## ✅ Step 11: Explore the Generated Code & Add required logics and validations
 Look inside the following folders:
 
 - Repositories
@@ -286,16 +321,17 @@ Look inside the following folders:
 
 | MODEL_CUSTOM (This images based on model customized in this sample)                 |
 |-------------------------|
-|![MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_CUSTOM_Store.png)|
+|![MODEL_CUSTOM](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/MODEL_CUSTOM_Store2.png)|
 
  
-##  ✅ Step 11: Configure your application
+##  ✅ Step 12: Configure your application
 This based on your application requirements.
 - Confuger database connection string in `appsettings.json` file.
 ```json
 ...............
   "AllowedHosts": "*",
   "ConnectionStrings": {
+      // TO DO: Apply your connection data
     "ConnectionString": "Server=SERVER_NAME;Database=DATABASE_NAME;User Id=USER_NAME;Password=PASSWORD;TrustServerCertificate=True"
 
   }
@@ -313,24 +349,6 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 ......................
 ```
 - Add any other configurations needed.
-
-## ✅ Step 12: Wire It to the API
-- Create a basic controllers called `Products`,`Customers` and `Orders`, etc.
-- Link them to unit of work class.
- ```C#
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : Controller
-    {
-        private readonly IUnitOfWork _unitOfWork; 
-        public ProductsController(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-        .........
-    }
-```
-> ⚠️ **Important**: Open `ProductsController` in the **SampleStore** app, then **uncomment the code** to enable faster testing during development.
 
 ---
 ## 🎯 Learning Objectives
@@ -357,4 +375,8 @@ If you're stuck or want feedback on your solution: Open a [GitHub Issue](https:/
  
 
 Your support is greatly appreciated and helps keep this project active and maintained! 🙏
+
+ 
+
+
 
