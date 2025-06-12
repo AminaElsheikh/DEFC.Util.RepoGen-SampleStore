@@ -21,6 +21,7 @@ which automates repository and Unit of Work generation using **SQL Server stored
    - [✅ Step 10: Use Batch option for OrderItems](#-step-10-for-orderitems-table-will-use-batch-option)
    - [✅ Step 11: Explore the Generated Code](#-step-11-explore-the-generated-code--add-required-logics-and-validations)
    - [✅ Step 12: Configure your application](#-step-12-configure-your-application)
+   - [✅ Step 13: Final result](#-step-13-final-result)
 4. [🎯 Learning Objectives](#-learning-objectives)
 5. [📩 Questions?](#-questions)
 6. [🎯 Learning Outcome](#-learning-outcome)
@@ -350,7 +351,13 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 ```
 - Add any other configurations needed.
 
+
+##  ✅ Step 13: Final result
+
+![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/Final_Result.png)
+
 ---
+
 ## 🎯 Learning Objectives
 By completing this task, you will:
 
