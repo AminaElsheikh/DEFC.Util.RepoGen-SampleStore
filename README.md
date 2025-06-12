@@ -22,6 +22,7 @@ which automates repository and Unit of Work generation using **SQL Server stored
    - [✅ Step 9: Use Batch option for OrderItems](#-step-9-for-orderitems-table-will-use-batch-option)
    - [✅ Step 10: Explore the Generated Code](#-step-10-explore-the-generated-code--add-required-logics-and-validations)
    - [✅ Step 11: Configure your application](#-step-11-configure-your-application)
+   - [✅ Step 12: Final result](#-step-12-final-result)
 5. [📚 For More Tool Training](#-for-more-tool-training)
 6. [🧱 Challenges](#-challenge-1-remap-stored-procedure)
    - [Challenge 1: Remap Stored Procedure](#-challenge-1-remap-stored-procedure)
@@ -342,7 +343,11 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 ......................
 ```
 - Add any other configurations needed.
-- 
+
+##  ✅ Step 12: Final result
+
+![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen-SampleStore/blob/main/Img/Final_Result.png)
+
 ---
 
 ## 📚 For More Tool Training
