@@ -339,6 +339,7 @@ This based on your application requirements.
 }
 ```
 - Confuger database connection string in `Program.cs` file.
+- Add any other configurations needed.
 ```c#
 .....................
 var builder = WebApplication.CreateBuilder(args);
@@ -349,8 +350,6 @@ builder.Services.AddDbContext<StoreDBContext>(options =>
 );
 ......................
 ```
-- Add any other configurations needed.
-
 
 ##  ✅ Step 13: Final result
 
