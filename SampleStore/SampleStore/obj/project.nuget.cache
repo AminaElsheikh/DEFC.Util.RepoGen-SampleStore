@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xcck1Qc9H0i2YKnOWYJ9wyWEvBVKkDH4xhNFtyjq8757AtcPlNkCOq8Hp6/Ls/ExH1fAX6Z5h1Oct3r1vvTP+w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amina\\Desktop\\To My Hard Drive\\DEFC\\Sample\\SampleStore\\SampleStore\\SampleStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amina\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Amina\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Amina\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amina\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amina\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amina\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
