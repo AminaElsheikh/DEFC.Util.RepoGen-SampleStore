@@ -68,13 +68,13 @@ You'll generate the necessary code structure without writing boilerplate reposit
     - (OR) **.NET CLI** from terminal or command prompt *(`recommended`)* — provides better visualization and output formatting.		
     - (OR) **Package Manager Console** in Visual Studio.
 
-> 💡 **Important:** For best experience and readability, use **Developer PowerShell** or **.NET CLI**.
-![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/CLI.png)
-
 - Write the initialization command below
 ```bash
 dotnet tool run RepoGen initial
 ```
+> 💡 **Important:** For best experience and readability, use **Developer PowerShell** or **.NET CLI**.
+![PS](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/blob/main/Img/CLI.png)
+
 ### ✅ Step 5: Review the Configuration
 
 [See RepoGen Configuration](https://github.com/AminaElsheikh/DEFC.Util.RepoGen/wiki/Configuration)
