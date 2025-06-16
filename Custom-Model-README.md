@@ -59,9 +59,12 @@ You'll generate the necessary code structure without writing boilerplate reposit
 - `Microsoft.EntityFrameworkCore.SqlServer`
 - `Microsoft.EntityFrameworkCore`
 - `DEFC.Util.RepoGen`
-  ```bash
-  dotnet add package DEFC.Util.RepoGen --version 1.0.0-beta
-  ```
+```bash
+dotnet new tool-manifest
+```
+```bash
+dotnet tool install --local DEFC.Util.RepoGen --version 1.0.0-beta
+```
 
 ### ✅ Step 4: Initialize the RepoGen tool
 - Open **Developer PowerShell for Visual Studio** *(`recommended`)* — provides better visualization and output formatting.
